@@ -1,6 +1,11 @@
 <template>
   <div class="page-content page-container" id="page-content">
       <h1>Featured Developers List</h1>
+       <div class="addButton">
+      
+          <font-awesome-icon color="blue" icon="plus" />
+        
+    </div>
     <div class="row">
       <div class="col mb-4">
         <div class="card auto">
@@ -13,8 +18,8 @@
             <p class="card-text">link</p>
             <p class="card-text">Goal</p>
             <p class="card-text">Attainment</p>
-            <font-awesome-icon icon="edit" />
-            <font-awesome-icon icon="delete"/>
+            <font-awesome-icon icon="edit" /> &nbsp;
+            <font-awesome-icon color="red" icon="trash" />
           </div>
         </div>
       </div>
@@ -31,6 +36,8 @@
             <p class="card-text">Goal</p>
             <p class="card-text">Attainment</p>
             <font-awesome-icon icon="edit" />
+             &nbsp;
+            <font-awesome-icon color="red" icon="trash" />
           </div>
         </div>
       </div>
@@ -46,6 +53,8 @@
             <p class="card-text">Goal</p>
             <p class="card-text">Attainment</p>
             <font-awesome-icon icon="edit" />
+             &nbsp;
+            <font-awesome-icon color="red" icon="trash" />
           </div>
         </div>
       </div>
@@ -61,6 +70,8 @@
             <p class="card-text">Goal</p>
             <p class="card-text">Attainment</p>
             <font-awesome-icon icon="edit" />
+             &nbsp;
+            <font-awesome-icon color="red" icon="trash" />
           </div>
         </div>
       </div>

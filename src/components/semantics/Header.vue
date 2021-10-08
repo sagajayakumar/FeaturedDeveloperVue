@@ -2,7 +2,7 @@
    <div class="header" style="overflow-x:hidden">
     <b-navbar toggleable="lg" class="navbarHeader" fixed>      
       <b-navbar-brand href="https://www.nwmissouri.edu/" class="brand cropped1" target="_blank"
-        ><img src="../../assets/NW-transparent-logo.svg"  alt="ltc-logo"  height="80"  
+        ><img src="../../assets/NW-transparent-logo.svg"  alt="ltc-logo"  height="70"  
       /></b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
