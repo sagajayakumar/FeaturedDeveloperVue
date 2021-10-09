@@ -3,7 +3,7 @@
       <h1>Featured Developers List</h1>
        <div class="addButton">
       
-          <font-awesome-icon color="blue" icon="plus" />
+      <!--    <font-awesome-icon color="blue" icon="plus" /> -->
         
     </div>
     <div class="row">

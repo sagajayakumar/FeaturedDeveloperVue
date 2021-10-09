@@ -2,7 +2,7 @@ import VueRouter from 'vue-router';
 import Vue from 'vue';
 import Home from '../Home';
 import DevelopersList from '../DevelopersList';
-
+import Login from '../Login';
 Vue.use(VueRouter);
 
 const routes = [{
@@ -15,6 +15,10 @@ const routes = [{
     {
         path: "/developersList",
         component: DevelopersList,
+    },
+    {
+        path: "/login",
+        component: Login,
     }
 ]
 
