@@ -6,7 +6,7 @@
       </b-row>
       <div class="padding">
         <div class="row container d-flex justify-content-center">
-          <div class="col-xl-6 col-md-12">
+          <div class="col-xl-8 col-md-12">
             <div class="card user-card-full">
               <div class="row m-l-0 m-r-0">
                 <div class="col-sm-4 bg-c-lite-green user-profile">
@@ -15,11 +15,13 @@
                       <img
                         src="https://img.icons8.com/bubbles/100/000000/user.png"
                         class="img-radius"
-                        alt="User-Profile-Image" height="100" width="100"
+                        alt="User-Profile-Image"
+                        height="100"
+                        width="100"
                       />
                     </div>
-                    <h6 class="f-w-600">Hembo Tingor</h6>
-                    <p>Web Designer</p>
+                    <h6 class="f-w-600">{{ this.data.data.fullname }}</h6>
+
                     <i
                       class="
                         mdi mdi-square-edit-outline
@@ -39,27 +41,34 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <p class="m-b-10 f-w-600">Email</p>
-                        <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
-                      </div>
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">Phone</p>
-                        <h6 class="text-muted f-w-400">98979989898</h6>
+                        <h6 class="text-muted f-w-400">
+                          {{ this.data.data.emailaddress }}
+                        </h6>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="col-sm-6">
                         <p class="m-b-10 f-w-600">Skills</p>
-                        <h6 class="text-muted f-w-400">Java,Vue</h6>
+                        <h6 class="text-muted f-w-400">
+                          {{ this.data.data.skills }}
+                        </h6>
                       </div>
                       <div class="col-sm-6">
                         <p class="m-b-10 f-w-600">Goal</p>
-                        <h6 class="text-muted f-w-400">Goal here</h6>
+                        <h6 class="text-muted f-w-400">
+                          {{ this.data.data.goals }}
+                        </h6>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-sm-6">
-                        <a slt="link to git" src="link to git"></a>
+                         <a slt = "link to linkedin" src = "link">{{this.data.data.linkedinurl}}</a>
+                      </div>
+                      <div class="col-sm-6">
+                        <a slt="link to git" src="link to git">{{
+                          this.data.data.githuburl
+                        }}</a>
                       </div>
                     </div>
                   </div>
@@ -75,8 +84,29 @@
 </template>
 
 <script>
+//import axios from 'axios'
 export default {
   name: "Home",
+  mounted() {
+    this.developerOfDay();
+  },
+  data() {
+    return {
+      data: null,
+    };
+  },
+  methods: {
+    async developerOfDay() {
+      await this.$axios
+        .get(`https://localhost:44312/api/FeaturedDevelopers`)
+        .then((res) => {
+          console.log(res);
+          if (res.status == 200) {
+            this.data = res;
+          }
+        });
+    },
+  },
 };
 </script>
 
