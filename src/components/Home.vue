@@ -103,7 +103,7 @@ export default {
     async developerOfDay() {
       await this.$axios
         //.get(`https://localhost:44312/api/DeveloperofTheDay`)
-        .get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`)
+        .get(`https://featureddeveloperapis.herokuapp.com/api/FeaturedDevelopers`)
         .then((res) => {
           console.log(res);
           if (res.status == 200) {
