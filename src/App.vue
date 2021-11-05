@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <Header />
+    <Header/>
     <div class="content container-fluid">
       <router-view />
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from "./components/semantics/Header.vue";
+import Footer from "./components/semantics/Footer.vue";
 export default {
   name: "App",
   components: {
     Header,
+    Footer,
   },
 };
 </script>

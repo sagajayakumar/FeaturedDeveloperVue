@@ -10,9 +10,15 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import './registerServiceWorker'
-
+import {
+    faTwitter,
+    faFacebook,
+    faStackOverflow,
+    faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(faSpinner);
+library.add(faTwitter, faFacebook, faStackOverflow, faGithub);
 library.add(fas);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false

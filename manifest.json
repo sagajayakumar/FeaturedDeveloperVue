@@ -1,0 +1,22 @@
+{
+    "name": "FD PWA",
+    "short_name": "FD PWA",
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#006747",
+    "description": "Progressive web app for featured developer.",
+    "icons": [{
+            "src": "./public/img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./public/img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
