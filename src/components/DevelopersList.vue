@@ -4,15 +4,14 @@
     <div class="addButton">
       <!--    <font-awesome-icon color="blue" icon="plus" /> -->
     </div>
-    <div>
-      <div v-for="c in this.data.data" :key="c.developerid">
+    <div class="row">
+      <div class="col mb-4" v-for="c in this.data.data" :key="c.developerid">
         <div class="row">
-          <div class="col mb-4">
             <div class="card auto">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div class="card-body">
+              <div >
                 <div class="card-block text-center text-white">
-                    <div class="m-b-25">
+                    <div >
                       <img
                         src="https://img.icons8.com/bubbles/100/000000/user.png"
                         class="img-radius"
@@ -50,7 +49,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
     <a href="#/home">Home</a>
