@@ -1,16 +1,16 @@
 <template>
   <div class="footer">
   <div><a href="https://github.com/shivaramkothapally/featured-developers-proposal"> 
-  <font-awesome-icon :icon="['fab', 'github']" class="icon alt"/> </a>
+  <font-awesome-icon :icon="['fab', 'github']" class="icon alt"/> </a> &nbsp;&nbsp; 
 
   <a href="https://github.com/sagajayakumar/FeaturedDeveloperVue"> 
-  Front End </a>
+  Front End </a> &nbsp;&nbsp;
 
   <a href="https://github.com/sagajayakumar/FeaturedDeveloper3A/tree/master"> 
-  Back End </a>
+  Back End </a> &nbsp;&nbsp;
 
   <a href="https://trello.com/b/yRWaDdG1/featureddeveloper"> 
-  Board </a>
+  Board </a> &nbsp;&nbsp;
   
   3A Featured Developers</div>
     </div>
@@ -32,5 +32,13 @@ export default defineComponent({
   color: whitesmoke;
   padding: 10px;
   margin-top: 70px;
+}
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #5d63b8;
 }
 </style>

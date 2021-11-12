@@ -34,4 +34,17 @@ export default {
   background: #009688;
   color: white;
 }
+.content {
+  min-height: 87vh;
+  margin-bottom: -110px;
+}
+.f-15 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
 </style>
