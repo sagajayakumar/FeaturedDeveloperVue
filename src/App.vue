@@ -35,7 +35,7 @@ export default {
   color: white;
 }
 .content {
-  min-height: 87vh;
+  min-height: 84vh;
   margin-bottom: -110px;
 }
 .f-15 {

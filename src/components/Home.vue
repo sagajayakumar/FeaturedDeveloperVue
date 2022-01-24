@@ -5,7 +5,7 @@
         <h1>FEATURED DEVELOPER</h1>
       </b-row>
       <div class="padding">
-        <div class="row container d-flex justify-content-center">
+        <div class="row justify-content-center">
           <div class="col-xl-8 col-md-12">
             <div class="card user-card-full">
               <div class="row m-l-0 m-r-0">
@@ -23,7 +23,7 @@
                       
                     </div>
                     <br>
-                    <h6 class="f-w-600"><b>{{ this.data.data.fullname }}</b></h6>
+                    <h6 class="f-w-600"><b>{{ this.data.data.fullName }}</b></h6>
 
                     <i
                       class="
@@ -101,16 +101,13 @@ export default {
   },
   methods: {
     async developerOfDay() {
-      await this.$axios
-        //.get(`https://localhost:44312/api/DeveloperofTheDay`)
-        .get(`https://featureddeveloperapis.herokuapp.com/api/FeaturedDevelopers`)
-        .then((res) => {
-          console.log(res);
-          if (res.status == 200) {
-            this.data = res;
-          }
-        });
-
+       await this.$axios.get(`https://featured-developers-threeb.herokuapp.com/developers/random`).then((res) => {
+        console.log(res)  
+        if (res.status == 200) {
+          this.data = res
+          console.log("data=",this.data) 
+        }
+      });
       document.getElementById('image1').src = this.data.data.image
       document.getElementById('linkedIn').href = this.data.data.linkedinurl
       document.getElementById('git').href = this.data.data.githuburl
@@ -146,6 +143,7 @@ export default {
 
 .padding {
   padding: 3rem !important;
+  
 }
 
 .user-card-full {
@@ -157,7 +155,7 @@ export default {
   -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
   box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .bg-c-lite-green {

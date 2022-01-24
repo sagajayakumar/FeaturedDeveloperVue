@@ -68,8 +68,9 @@ export default {
   methods: {
     async developers() {
       await this.$axios
-        .get(`https://localhost:44312/api/FeaturedDevelopers`)
+        //.get(`https://localhost:44312/api/FeaturedDevelopers`)
         //.get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`)
+        .get('https://featured-developers-threeb.herokuapp.com/developers/getall')
         .then((res) => {
           console.log(res);
           if (res.status == 200) {
