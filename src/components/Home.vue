@@ -101,7 +101,7 @@ export default {
   },
   methods: {
     async developerOfDay() {
-       await this.$axios.get(`https://featured-developers-threeb.herokuapp.com/developers/random`).then((res) => {
+       await this.$axios.get(`https://featured-developers-threeb.herokuapp.com/developers/randomshow`).then((res) => {
         console.log(res)  
         if (res.status == 200) {
           this.data = res
