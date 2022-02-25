@@ -96,11 +96,14 @@
                     v-model="developer.image"
                   />
                 </div>
-                <button type="submit" v-on:click="developers" class="btn btn-primary">Submit</button>
+                <button type="submit" v-on:click="developers" class="btn btn-primary">Submit</button>              
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>
+
+
