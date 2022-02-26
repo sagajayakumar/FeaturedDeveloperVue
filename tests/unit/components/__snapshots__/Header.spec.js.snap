@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.vue snapshot 1`] = `
+<div class="header" style="overflow-x: hidden;">
+  <b-navbar toggleable="lg" fixed="" class="navbarHeader">
+    <b-navbar-brand href="https://www.nwmissouri.edu/" target="_blank" class="brand cropped1"><img src="../../assets/NW-transparent-logo.svg" alt="ltc-logo" height="70"></b-navbar-brand>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+  </b-navbar>
+</div>
+`;
