@@ -25,6 +25,12 @@ npm run build
 ```
 npm run lint
 ```
+### Steps to run tests
+```
+Open the file ex., Footer.spec.js and open terminal then give command run t file name
+Test cases will be run and a test report generated as a file and test results will be shown in teminal
+```
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
