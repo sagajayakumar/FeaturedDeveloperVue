@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer.vue snapshot 1`] = `
+<div class="footer">
+  <div><a href="https://github.com/shivaramkothapally/featured-developers-proposal">
+      <font-awesome-icon icon="fab,github" class="icon alt"></font-awesome-icon>
+    </a> &nbsp;&nbsp;
+
+    <a href="https://github.com/sagajayakumar/FeaturedDeveloperVue">
+      Front End </a> &nbsp;&nbsp;
+
+    <a href="https://github.com/KeerthiMuli/Featured-Developer-ThreeB-backend">
+      Back End </a> &nbsp;&nbsp;
+
+    <a href="https://trello.com/b/yRWaDdG1/featureddeveloper">
+      Board </a> &nbsp;&nbsp;
+
+    3A Featured Developers
+  </div>
+</div>
+`;
