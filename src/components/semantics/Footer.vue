@@ -1,18 +1,18 @@
 <template>
   <div class="footer">
-  <div><a href="https://github.com/shivaramkothapally/featured-developers-proposal"> 
+  <div><a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal"> 
   <font-awesome-icon :icon="['fab', 'github']" class="icon alt"/> </a> &nbsp;&nbsp; 
 
   <a href="https://github.com/sagajayakumar/FeaturedDeveloperVue"> 
   Front End </a> &nbsp;&nbsp;
 
-  <a href="https://github.com/sagajayakumar/FeaturedDeveloper3A/tree/master"> 
+  <a href="https://github.com/KeerthiMuli/Featured-Developer-ThreeB-Backend"> 
   Back End </a> &nbsp;&nbsp;
 
-  <a href="https://trello.com/b/yRWaDdG1/featureddeveloper"> 
+  <a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal/projects/1"> 
   Board </a> &nbsp;&nbsp;
   
-  3A Featured Developers</div>
+  Featured Developers</div>
     </div>
   
 </template>
