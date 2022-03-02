@@ -6,14 +6,13 @@
   <a href="https://github.com/sagajayakumar/FeaturedDeveloperVue"> 
   Front End </a> &nbsp;&nbsp;
 
-  <a href="https://github.com/KeerthiMuli/Featured-Developer-ThreeB-Backend"> 
-
+  <a href="https://github.com/KeerthiMuli/Featured-Developer-ThreeB-backend"> 
   Back End </a> &nbsp;&nbsp;
 
   <a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal/projects/1"> 
   Board </a> &nbsp;&nbsp;
   
-  Featured Developers</div>
+  3A Featured Developers</div>
     </div>
   
 </template>
