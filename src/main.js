@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from "./components/router";
 import axios from "axios";
+import { Auth0Plugin } from "./auth";
+import { domain, clientId } from "../auth_config.json";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
@@ -34,6 +36,18 @@ Vue.prototype.$axios = axios.create({
         "Accept": "application/json",
     }
 })
+
+Vue.use(Auth0Plugin, {
+    domain,
+    clientId,
+    onRedirectCallback: appState => {
+        router.push(
+            appState && appState.targetUrl ?
+            appState.targetUrl :
+            window.location.pathname
+        );
+    }
+});
 
 
 new Vue({

@@ -4,7 +4,7 @@
       <b-navbar-brand href="https://www.nwmissouri.edu/" class="brand cropped1" target="_blank"
         ><img src="../../assets/NW-transparent-logo.svg"  alt="ltc-logo"  height="70"  
       /></b-navbar-brand>
-
+      <button id="qsLoginBtn" class="btn btn-primary btn-block" @click="login">Log in</button>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     </b-navbar>
   </div>
@@ -12,8 +12,19 @@
 </template>
 <script>
 export default {
- 
-}
+  name: "Header",
+  methods: {
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin
+      });
+    }
+  }
+};
 </script>
 
 <style scoped>
