@@ -12,7 +12,7 @@
   <a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal/projects/1"> 
   Board </a> &nbsp;&nbsp;
   
-  3A Featured Developers</div>
+   Featured Developers</div>
     </div>
   
 </template>

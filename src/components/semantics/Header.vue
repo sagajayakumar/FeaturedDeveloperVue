@@ -4,7 +4,13 @@
       <b-navbar-brand href="https://www.nwmissouri.edu/" class="brand cropped1" target="_blank"
         ><img src="../../assets/NW-transparent-logo.svg"  alt="ltc-logo"  height="70"  
       /></b-navbar-brand>
-      <button id="qsLoginBtn" class="btn btn-primary btn-block" @click="login">Log in</button>
+      <li v-if="!$auth.isAuthenticated && !$auth.loading" class="nav-item">
+              <button
+                id="qsLoginBtn"
+                class="btn btn-primary btn-margin"
+                @click.prevent="login"
+              >Login</button>
+            </li>
 
         <ul
             id="mobileAuthNavBar"
