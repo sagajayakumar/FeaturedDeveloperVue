@@ -5,6 +5,33 @@
         ><img src="../../assets/NW-transparent-logo.svg"  alt="ltc-logo"  height="70"  
       /></b-navbar-brand>
       <button id="qsLoginBtn" class="btn btn-primary btn-block" @click="login">Log in</button>
+
+        <ul
+            id="mobileAuthNavBar"
+            class="navbar-nav d-md-none d-flex"
+            v-if="$auth.isAuthenticated"
+          >
+            <li class="nav-item">
+              <span class="user-info">
+                <img
+                  :src="$auth.user.picture"
+                  alt="User's profile picture"
+                  class="nav-user-profile d-inline-block rounded-circle mr-3"
+                  width="50"
+                />
+                <h6 class="d-inline-block">{{ $auth.user.name }}</h6>
+              </span>
+            </li>
+            <li>
+              <font-awesome-icon icon="user" class="mr-3" />
+              <router-link to="/profile">Profile</router-link>
+            </li>
+
+            <li>
+              <font-awesome-icon icon="power-off" class="mr-3" />
+              <a id="qsLogoutBtn" href="#" class @click.prevent="logout">Log out</a>
+            </li>
+          </ul>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     </b-navbar>
   </div>
