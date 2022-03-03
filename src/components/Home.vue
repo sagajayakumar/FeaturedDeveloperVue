@@ -18,12 +18,13 @@
                         alt="User-Profile-Image"
                         height="190"
                         width="190"
-                        id = "image1"
-                      >
-                      
+                        id="image1"
+                      />
                     </div>
-                    <br>
-                    <h6 class="f-w-600"><b>{{ this.data.data.fullName }}</b></h6>
+                    <br />
+                    <h6 class="f-w-600">
+                      <b>{{ this.data.data.fullName }}</b>
+                    </h6>
 
                     <i
                       class="
@@ -66,11 +67,13 @@
                     </div>
                     <div class="row">
                       <div class="col-sm-6">
-                         <a slt = "link to linkedin" href = "" id = "linkedIn">{{this.data.data.linkedinurl}}</a>
-                           <link rel="stylesheet" href="styles.css" id = "link">
+                        <a slt="link to linkedin" href="" id="linkedIn">{{
+                          this.data.data.linkedinurl
+                        }}</a>
+                        <link rel="stylesheet" href="styles.css" id="link" />
                       </div>
                       <div class="col-sm-6">
-                        <a slt="link to git" href="link to git" id = "git">{{
+                        <a slt="link to git" href="link to git" id="git">{{
                           this.data.data.githuburl
                         }}</a>
                       </div>
@@ -101,19 +104,23 @@ export default {
   },
   methods: {
     async developerOfDay() {
-       await this.$axios.get(`https://featured-developers-threeb.herokuapp.com/developers/randomshow`).then((res) => {
-         console.log("res.data");
-       // await this.$axios.get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`).then((res) => {
-        console.log(res)  
-        if (res.status == 200) {
-          this.data = res
-          console.log("data=",this.data) 
-        }
-      });
-      document.getElementById('image1').src = this.data.data.image
-      document.getElementById('linkedIn').href = this.data.data.linkedinurl
-      document.getElementById('git').href = this.data.data.githuburl
-      
+           console.log("res.data1");
+      await this.$axios
+        .get(
+          `https://featured-developers-threeb.herokuapp.com/developers/randomshow`
+        )
+        .then((res) => {
+          console.log("res.data");
+          // await this.$axios.get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`).then((res) => {
+          console.log(res);
+          if (res.status == 200) {
+            this.data = res;
+            console.log("data=", this.data);
+          }
+        });
+      document.getElementById("image1").src = this.data.data.image;
+      document.getElementById("linkedIn").href = this.data.data.linkedinurl;
+      document.getElementById("git").href = this.data.data.githuburl;
     },
   },
 };
@@ -145,7 +152,6 @@ export default {
 
 .padding {
   padding: 3rem !important;
-  
 }
 
 .user-card-full {
