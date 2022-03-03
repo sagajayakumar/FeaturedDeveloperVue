@@ -28,15 +28,15 @@
                 <h6 class="d-inline-block">{{ $auth.user.name }}</h6>
               </span>
             </li>
-            <li>
+            
               <font-awesome-icon icon="user" class="mr-3" />
               <router-link to="/profile">Profile</router-link>
-            </li>
+            
 
-            <li>
+            
               <font-awesome-icon icon="power-off" class="mr-3" />
               <a id="qsLogoutBtn" href="#" class @click.prevent="logout">Log out</a>
-            </li>
+            
           </ul>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     </b-navbar>
