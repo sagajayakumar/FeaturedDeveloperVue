@@ -13,7 +13,7 @@
             </li>
 
         <ul
-            id="mobileAuthNavBar"
+            
             class="navbar-nav d-md-none d-flex"
             v-if="$auth.isAuthenticated"
           >
