@@ -51,7 +51,7 @@
               />
               &nbsp;
               <font-awesome-icon
-                @click="deleteDeveloper(c.emailaddress)"
+                @click="deleteDeveloper(c.developerId)"
                 color="red"
                 icon="trash"
               />
@@ -113,7 +113,8 @@ export default {
     },
 
     async addDeveloper(){
-        window.location.href = `#/CreateDeveloper`;
+        //window.location.href = `#/CreateDeveloper`;
+         window.location.href = `https://featureddeveloper.herokuapp.com/#/CreateDeveloper`;
     },
 
     async editDeveloper(id) {

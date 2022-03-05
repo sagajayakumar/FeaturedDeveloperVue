@@ -166,7 +166,7 @@ export default {
         )
         .then((res) => {
           if (res.status == 200) {
-            this.$router.push("/developers");
+            this.$router.push("/developersList");
           }
         });
     },
