@@ -119,8 +119,8 @@ export default {
 
     async editDeveloper(id) {
       window.sessionStorage.setItem('developerid', id);
-     //window.location.href = `#/EditDeveloper/${id}`;
-     window.location.href = `https://featureddeveloper.herokuapp.com/#/EditDeveloper/${id}`;
+     window.location.href = `#/EditDeveloper/${id}`;
+     //window.location.href = `https://featureddeveloper.herokuapp.com/#/EditDeveloper/${id}`;
     },
   },
 };
