@@ -166,7 +166,8 @@ export default {
         )
         .then((res) => {
           if (res.status == 200) {
-            this.$router.push("/developersList");
+            //this.$router.push("/developersList");
+            window.location.href = `https://featureddeveloper.herokuapp.com/#/developersList`;
           }
         });
     },
