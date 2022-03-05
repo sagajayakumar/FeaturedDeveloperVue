@@ -31,7 +31,7 @@ export default defineComponent({
   text-align: right;
   color: whitesmoke;
   padding: 10px;
-  margin-top: 70px;
+  margin-top: 110px;
 }
 a {
   color: white;

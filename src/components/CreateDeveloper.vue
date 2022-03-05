@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Create Developer</h4>
+              <h2 class="card-title">Create Developer</h2>
             </div>
             <div class="card-body">
               
@@ -17,7 +17,7 @@
                     id="id"
                     name="id"
                     placeholder="Developer ID"
-                    v-model="developerid"
+                    v-model="developer.developerId"
                   />
                 </div>
                 <div class="form-group">
@@ -28,7 +28,7 @@
                     id="name"
                     name="name"
                     placeholder="Name"
-                    v-model="fullname"
+                    v-model="developer.fullName"
                   />
                 </div>
                 <div class="form-group">
@@ -39,7 +39,7 @@
                     id="email"
                     name="email"
                     placeholder="Email"
-                    v-model="emailaddress"
+                    v-model="developer.emailaddress"
                   />
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@
                     id="goals"
                     name="goals"
                     placeholder="goals"
-                    v-model="goals"
+                    v-model="developer.goals"
                   />
                 </div>
                 <div class="form-group">
@@ -61,7 +61,7 @@
                     id="Skills"
                     name="Skills"
                     placeholder="Skills"
-                    v-model="skills"
+                    v-model="developer.skills"
                   />
                 </div>
                 <div class="form-group">
@@ -72,6 +72,7 @@
                     id="linkedin"
                     name="linkedin"
                     placeholder="linkedin URL"
+                    v-model="developer.linkedinurl"
                   />
                 </div>
                 <div class="form-group">
@@ -82,7 +83,7 @@
                     id="Git"
                     name="linkedin"
                     placeholder="Git URL"
-                    v-model="githuburl"
+                    v-model="developer.githuburl"
                   />
                 </div>
                 <div class="form-group">
@@ -113,12 +114,12 @@ export default defineComponent({
   data() {
     return {
       developer: {
-        developerid: "",
-        fullname: "",
+        developerId: "",
+        fullName: "",
         emailaddress: "",
         goals: "",
         skills: "",
-        linkedin: "",
+        linkedinurl: "",
         githuburl: "",
         image: "",
       },
@@ -126,17 +127,16 @@ export default defineComponent({
   },
   methods: {
      developers() {
-         console.log(this.developer + "1212");
        this.$axios
-        .post(`https://localhost:44312/api/developer`, this.developer)
+        //.post(`https://localhost:44312/api/developer`, this.developer)
+        .post("https://featured-developers-threeb.herokuapp.com/developers/create",this.developer )
         //.get(`https://featureddeveloperapis.herokuapp.com/api/developer`)
         .then((res) => {
-          console.log(this.developer);
           if (res.status == 200) {
             this.data = res;
-            console.log(this.data.data.length + " is the length");
           }
         });
+        window.location.href = `#/developersList`;
     },
   },
 });

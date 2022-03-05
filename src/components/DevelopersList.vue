@@ -1,54 +1,63 @@
 <template>
   <div class="page-content page-container" id="page-content">
-    <h1>Featured Developers List</h1>
-    <div class="addButton">
-      <!--    <font-awesome-icon color="blue" icon="plus" /> -->
+    <div class="addButton form-row add">
+          <button type="button" class="btn btn-primary" @click="addDeveloper">Add Developer</button>
     </div>
+    <h1>Featured Developers List</h1>
+    
     <div class="row">
       <div class="col mb-4" v-for="c in this.data.data" :key="c.developerid">
         <div class="row">
-            <div class="card auto">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div >
-                <div class="card-block text-center text-white">
-                    <div >
-                      <img
-                        src="https://img.icons8.com/bubbles/100/000000/user.png"
-                        class="img-radius"
-                        alt="User-Profile-Image"
-                        height="190"
-                        width="190"
-                        id = "image1"
-                      >
-                    </div>
-                    <br>
-                    <i
-                      class="
-                        mdi mdi-square-edit-outline
-                        feather
-                        icon-edit
-                        m-t-10
-                        f-16
-                      "
-                    ></i>
-                  </div>
-                <h5 class="card-title">{{c.fullname}}</h5>
-                <p class="card-text">{{c.emailaddress}}</p>
-                <p class="card-text">{{c.skills}}</p>
-                <p class="card-text">Phone</p>
-                <a slt="link to linkedin" href="" id="linkedIn">{{
-                  c.linkedinurl
-                }}</a>
-                <p class="card-text">{{c.goals}}</p>
-                <a slt="link to git" href="link to git" id="git">{{
-                  c.githuburl
-                }}</a>
-                <br>
-                <font-awesome-icon icon="edit" /> &nbsp;
-                <font-awesome-icon color="red" icon="trash" />
+          <div class="card auto">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div>
+              <div class="card-block text-center text-white">
+                <div>
+                  <img
+                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                    class="img-radius"
+                    alt="User-Profile-Image"
+                    height="190"
+                    width="190"
+                    id="image1"
+                  />
+                </div>
+                <br />
+                <i
+                  class="
+                    mdi mdi-square-edit-outline
+                    feather
+                    icon-edit
+                    m-t-10
+                    f-16
+                  "
+                ></i>
               </div>
+              <h5 class="card-title">{{ c.fullname }}</h5>
+              <p class="card-text">{{ c.emailaddress }}</p>
+              <p class="card-text">{{ c.skills }}</p>
+              <p class="card-text">Phone</p>
+              <a slt="link to linkedin" href="" id="linkedIn">{{
+                c.linkedinurl
+              }}</a>
+              <p class="card-text">{{ c.goals }}</p>
+              <a slt="link to git" href="link to git" id="git">{{
+                c.githuburl
+              }}</a>
+              <br />
+              <font-awesome-icon
+                @click="editDeveloper(c.developerId)"
+                icon="edit"
+              />
+              &nbsp;
+              <font-awesome-icon
+                @click="deleteDeveloper(c.emailaddress)"
+                color="red"
+                icon="trash"
+              />
             </div>
           </div>
+        </div>
       </div>
     </div>
     <a href="#/home">Home</a>
@@ -57,33 +66,59 @@
 <script>
 export default {
   name: "developersList",
-   mounted() {
+  mounted() {
     this.developers();
   },
   data() {
     return {
       data: null,
+      developer: {
+       
+        fullname: "",
+        emailaddress: "",
+        skills: "",
+        goals: "",
+        linkedinurl: "",
+        githuburl: "",
+      },
     };
   },
   methods: {
     async developers() {
       await this.$axios
-        //.get(`https://localhost:44312/api/FeaturedDevelopers`)
-        //.get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`)
-        .get('https://featured-developers-threeb.herokuapp.com/developers/getall')
+        .get(
+          "https://featured-developers-threeb.herokuapp.com/developers/getall"
+        )
+        
         .then((res) => {
-          console.log(res);
           if (res.status == 200) {
             this.data = res;
-            console.log(this.data.data.length + " is the length");
           }
         });
-      // for (let index = 0; index < this.data.data.length; index++) {
-      // document.getElementById("image1").src = this.data.data[index].image;
-      // }
-     
+  
       document.getElementById("linkedIn").href = this.data.data.linkedinurl;
       document.getElementById("git").href = this.data.data.githuburl;
+    },
+
+    async deleteDeveloper(id) {
+      await this.$axios
+        .delete(
+          `https://featured-developers-threeb.herokuapp.com/developers/delete/${id}`
+        )
+        .then((res) => {
+          if (res.status == 200) {
+            this.developers();
+          }
+        });
+    },
+
+    async addDeveloper(){
+        window.location.href = `#/CreateDeveloper`;
+    },
+
+    async editDeveloper(id) {
+      window.sessionStorage.setItem('developerid', id);
+     window.location.href = `#/EditDeveloper/${id}`;
     },
   },
 };
@@ -101,5 +136,12 @@ export default {
   width: 100%;
   border: 1px solid #4caf50;
   background-color: #006747;
+}
+.add{
+  float: right;
+}
+.fai{
+   
+  width: 100%;
 }
 </style>

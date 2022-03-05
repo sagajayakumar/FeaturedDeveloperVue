@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Home from '../Home';
 import DevelopersList from '../DevelopersList';
 import CreateDeveloper from '../CreateDeveloper';
+import EditDeveloper from '../EditDeveloper';
 import Login from '../Login';
 Vue.use(VueRouter);
 
@@ -22,8 +23,12 @@ const routes = [{
         component: Login,
     },
     {
-        path: "/create",
+        path: "/CreateDeveloper",
         component: CreateDeveloper,
+    },
+    {
+        path: "/EditDeveloper/:id",
+        component: EditDeveloper,
     }
 ]
 

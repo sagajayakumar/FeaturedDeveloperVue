@@ -104,18 +104,17 @@ export default {
   },
   methods: {
     async developerOfDay() {
-           console.log("res.data1");
       await this.$axios
         .get(
-          `https://featured-developers-threeb.herokuapp.com/developers/randomshow`
+          //`https://featured-developers-threeb.herokuapp.com/developers/randomshow`
+          'https://featured-developers-threeb.herokuapp.com/developers/random'
+         // 'http://localhost:8088/developers/random'
         )
         .then((res) => {
-          console.log("res.data");
           // await this.$axios.get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`).then((res) => {
-          console.log(res);
           if (res.status == 200) {
             this.data = res;
-            console.log("data=", this.data);
+            
           }
         });
       document.getElementById("image1").src = this.data.data.image;
