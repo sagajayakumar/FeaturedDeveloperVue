@@ -11,6 +11,9 @@
 
   <a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal/projects/1"> 
   Board </a> &nbsp;&nbsp;
+
+  <a href="https://featured-developers-threeb.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config"> 
+  Swagger </a> &nbsp;&nbsp;
   
    Featured Developers</div>
     </div>
