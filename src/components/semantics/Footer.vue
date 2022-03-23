@@ -15,6 +15,9 @@
   <a href="https://featured-developers-threeb.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config"> 
   Swagger </a> &nbsp;&nbsp;
   
+  <a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal/wiki"> 
+  Personal Wikis </a> &nbsp;&nbsp;
+  
    Featured Developers</div>
     </div>
   
