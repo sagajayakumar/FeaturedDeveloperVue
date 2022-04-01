@@ -14,17 +14,16 @@
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div>
               <div class="card-block text-center text-white">
-                <div>
-                  <img
-                    src="https://img.icons8.com/bubbles/100/000000/user.png"
+                <div id="123"></div>
+                <br />
+                <img
+                    :src= "getimgURL(c)"
                     class="img-radius"
                     alt="User-Profile-Image"
                     height="190"
                     width="190"
                     id="image1"
                   />
-                </div>
-                <br />
                 <i
                   class="
                     mdi mdi-square-edit-outline
@@ -38,7 +37,7 @@
               <h5 class="card-title">{{ c.fullname }}</h5>
               <p class="card-text">{{ c.emailaddress }}</p>
               <p class="card-text">{{ c.skills }}</p>
-              
+
               <a slt="link to linkedin" href="" id="linkedIn">{{
                 c.linkedinurl
               }}</a>
@@ -86,6 +85,7 @@ export default {
     };
   },
   methods: {
+
     async developers() {
       await this.$axios
         .get(
@@ -95,26 +95,15 @@ export default {
         .then((res) => {
           if (res.status == 200) {
             this.data = res;
-
-            //for (let r =0; r<length; r++) {
-            //console.log("len " + length)
-            //console.log(" im2 " + res.data[r].image);
-            // document.getElementById("image1").src = res.data[r].image;
-            //}
           }
         });
-      for (let index = 0; index < this.data.data.length; index++) {
-              document.getElementById("image1").src =
-                this.data.data[index].image;
-              console.log("index " + index);
-              console.log("img " + document.getElementById("image1").src) 
-              console.log(index + " " + this.data.data[index].image);
-              console.log(index + " " + JSON.stringify(this.data.data[index]));
-            }
-      console.log("image " + this.data.data.image);
-      console.log("image " + this.data.data.githuburl);
+
     },
 
+    getimgURL(c){
+      console.log("cccc " + JSON.stringify(c))
+      return c.image
+    },
     async deleteDeveloper(id) {
       await this.$axios
         .delete(

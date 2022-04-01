@@ -84,7 +84,9 @@
             </div>
           </div>
         </div>
-        <a href="#/developersList">View all</a>
+        <div v-if="$auth.isAuthenticated" id="asd">
+          <a href="#/developersList">View all</a>
+        </div>
       </div>
     </b-container>
   </div>
@@ -107,14 +109,13 @@ export default {
       await this.$axios
         .get(
           //`https://featured-developers-threeb.herokuapp.com/developers/randomshow`
-          'https://featured-developers-threeb.herokuapp.com/developers/random'
-         // 'http://localhost:8088/developers/random'
+          "https://featured-developers-threeb.herokuapp.com/developers/random"
+          // 'http://localhost:8088/developers/random'
         )
         .then((res) => {
           // await this.$axios.get(`https://featureddeveloperapis.herokuapp.com/api/DeveloperofTheDay`).then((res) => {
           if (res.status == 200) {
             this.data = res;
-            
           }
         });
       document.getElementById("image1").src = this.data.data.image;

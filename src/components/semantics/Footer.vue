@@ -23,6 +23,9 @@
 
    <a href="https://sagajayakumar.github.io/featured_developer_javadoc/com/nwmsufeatureddevelopersthreeb/featureddevelopersthreeb/package-summary.html"> 
   Java Doc </a> &nbsp;&nbsp;
+
+   <a href="https://github.com/KeerthiMuli/Featured-Developer-Proposal/issues"> 
+  Issues  </a> &nbsp;&nbsp;
   
    Featured Developers</div>
     </div>
