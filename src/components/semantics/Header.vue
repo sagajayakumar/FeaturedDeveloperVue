@@ -18,7 +18,7 @@
             class="btn btn-primary btn-margin"
             @click.prevent="login"
           >
-            Login
+            Login/Signup
           </button>
         </div>
 
@@ -84,7 +84,7 @@ export default {
 }
 
 #as {
-  margin-left: 1100px;
+  margin-left: 1050px;
 }
 
 #asd {
